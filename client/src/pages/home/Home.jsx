@@ -82,7 +82,7 @@ function Home() {
   }, [getTransactions]);
 
   return (
-    <div className="flex mx-16 my-8">
+    <div className="flex mx-16 my-6">
       <div className="w-full">
         <Graph config={config} dataObj={dataObj} />
       </div>

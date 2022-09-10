@@ -27,21 +27,25 @@ function TransactionList({ transactions, getTransactions }) {
   };
 
   return (
-    <div className="w-96 max-h-80 overflow-y-auto bg-yellow-100 drop-shadow-md p-8 rounded-3xl">
-      <h3 className="mb-4 text-center">Transaction List</h3>
+    <div className="w-96 max-h-60 overflow-y-auto bg-deep-purple-50 border-deep-purple-500 border-2 shadow-lg shadow-deep-purple-500 px-8 py-6 rounded-3xl">
+      <h3 className="mb-4 text-center text-xl font-bold text-deep-purple-500">
+        Transaction List
+      </h3>
       {transactions.map((transaction) => (
         <div
-          className="border-l-4 rounded-lg p-3 mb-2 flex justify-between"
+          className="rounded-lg px-3 py-2 mb-2 flex justify-between"
           style={{
             borderColor: color[transaction.category],
             backgroundColor: bgColor[transaction.category],
+            border: `1px solid ${color[transaction.category]}`,
+            borderLeft: `4px solid ${color[transaction.category]}`,
           }}
           key={transaction._id}
         >
           <div>{transaction.name}</div>
           <div
             onClick={() => deleteTransactions(transaction._id)}
-            className="bg-gray-200 px-1 drop-shadow-md cursor-pointer rounded-md text-gray-600"
+            className="bg-gray-200 border-gray-400 border px-1 drop-shadow-md cursor-pointer rounded-md text-gray-600"
           >
             &#10006;
           </div>

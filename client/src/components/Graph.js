@@ -6,7 +6,7 @@ import Label from "../components/Label";
 Chart.register(ArcElement);
 
 export default function Graph({ dataObj, config }) {
-  const total = dataObj.reduce((acc, curr) => acc + curr.amount, 0);
+  const total = dataObj?.reduce((acc, curr) => acc + curr.amount, 0) || 0;
   return (
     <div className="flex justify-content max-w-xs mx-auto">
       <div className="item">

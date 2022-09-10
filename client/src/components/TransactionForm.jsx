@@ -29,13 +29,13 @@ function TransactionForm({ getTransactions }) {
         err: new Error("Transaction Added"),
         color: "green",
       });
+      getTransactions();
     } else {
       setError({
         err: res,
         color: "red",
       });
     }
-    getTransactions();
   };
 
   const handleSubmit = (e) => {
@@ -44,8 +44,10 @@ function TransactionForm({ getTransactions }) {
   };
 
   return (
-    <div className="w-96 bg-yellow-50 drop-shadow-md p-8 rounded-3xl">
-      <h3 className="mb-4 text-center">Add Transaction</h3>
+    <div className="w-96 border-blue-500 bg-blue-50 border-2 shadow-lg shadow-blue-500 px-8 py-6 rounded-3xl">
+      <h3 className="mb-6 text-xl text-blue-600 font-bold text-center">
+        Add Transaction
+      </h3>
       <form>
         <Select label="Select Category" onChange={(val) => setCategory(val)}>
           <Option value="Food">Food</Option>
