@@ -11,18 +11,21 @@ function TransactionForm({ getTransactions }) {
   const [category, setCategory] = useState("");
 
   const addTransaction = async () => {
-    let res = await fetch("http://localhost:5000/api/expenses/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        amount,
-        category,
-        user: user._id,
-      }),
-    });
+    let res = await fetch(
+      "https://expense-tracker-rb.herokuapp.com/api/expenses/create",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          amount,
+          category,
+          user: user._id,
+        }),
+      }
+    );
     res = await res.json();
     if (res.success) {
       setError({

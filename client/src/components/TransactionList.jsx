@@ -17,12 +17,15 @@ function TransactionList({ transactions, getTransactions }) {
   };
 
   const deleteTransactions = async (id) => {
-    await fetch(`http://localhost:5000/api/expenses/delete/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    await fetch(
+      `https://expense-tracker-rb.herokuapp.com/api/expenses/delete/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     getTransactions();
   };
 

@@ -6,12 +6,9 @@ const expenseRouter = require("./routes/expenseRoutes");
 
 const app = express();
 
+app.use(express.static("build"));
 app.use(cors());
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.use("/api/users", userRouter);
 app.use("/api/expenses", expenseRouter);
