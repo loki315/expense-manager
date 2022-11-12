@@ -30,3 +30,8 @@ Then
 3. git add .
 4. git commit -m ""
 5. git push heroku HEAD:master
+
+<!-- Updating -->
+
+1. To make any changes in the front-end, make sure to run the build command and then copy the build folder into server folder. Then push the changes to heroku.
+2. To make any changes in the back-end, make sure to push the changes to heroku.
