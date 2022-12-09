@@ -1,7 +1,4 @@
 client/node_modules
-server/node_modules
-server/vars
-client/build
-server/public
-
+node_modules
+vars
 .env

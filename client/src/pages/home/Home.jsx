@@ -20,7 +20,7 @@ function Home() {
 
   const getGraphData = useCallback(async () => {
     let res = await fetch(
-      `https://expense-tracker-rb.herokuapp.com/api/expenses/getAll/${user._id}`,
+      `/api/expenses/getAll/${user._id}`,
       {
         method: "GET",
         headers: {
@@ -64,7 +64,7 @@ function Home() {
 
   const getTransactions = useCallback(async () => {
     let res = await fetch(
-      `https://expense-tracker-rb.herokuapp.com/api/expenses/getOne/${user._id}`,
+      `/api/expenses/getOne/${user._id}`,
       {
         method: "GET",
         headers: {

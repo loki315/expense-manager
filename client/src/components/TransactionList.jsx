@@ -18,7 +18,7 @@ function TransactionList({ transactions, getTransactions }) {
 
   const deleteTransactions = async (id) => {
     await fetch(
-      `https://expense-tracker-rb.herokuapp.com/api/expenses/delete/${id}`,
+      `/api/expenses/delete/${id}`,
       {
         method: "DELETE",
         headers: {

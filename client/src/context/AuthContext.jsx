@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
 
   async function login(data) {
     let res = await fetch(
-      "https://expense-tracker-rb.herokuapp.com/api/users/login",
+      "/api/users/login",
       {
         method: "POST",
         headers: {
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
 
   async function signup(data) {
     const res = await fetch(
-      "https://expense-tracker-rb.herokuapp.com/api/users/signup",
+      "/api/users/signup",
       {
         method: "POST",
         headers: {
@@ -116,7 +116,7 @@ export const AuthProvider = ({ children }) => {
 
   async function logout() {
     const res = await fetch(
-      "https://expense-tracker-rb.herokuapp.com/api/users/logout",
+      "/api/users/logout",
       {
         method: "GET",
         headers: {
@@ -145,7 +145,7 @@ export const AuthProvider = ({ children }) => {
     const fn = async () => {
       if (jwt) {
         let res = await fetch(
-          "https://expense-tracker-rb.herokuapp.com/api/users/protect",
+          "/api/users/protect",
           {
             method: "POST",
             headers: {

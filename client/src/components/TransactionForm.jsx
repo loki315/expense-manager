@@ -12,7 +12,7 @@ function TransactionForm({ getTransactions }) {
 
   const addTransaction = async () => {
     let res = await fetch(
-      "https://expense-tracker-rb.herokuapp.com/api/expenses/create",
+      "/api/expenses/create",
       {
         method: "POST",
         headers: {
