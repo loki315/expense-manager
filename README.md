@@ -1,4 +1,4 @@
-Live at : - https://expense-tracker-rb.herokuapp.com/
+Live at : - https://expense-tracker-rb.cyclic.app/
 
 Download this folder
 
